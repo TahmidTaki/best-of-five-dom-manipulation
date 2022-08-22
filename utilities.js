@@ -36,10 +36,18 @@ function addPlayerInList(playerName) {
     const li = document.createElement('li');
     li.innerText = playerName;
 
-    if (playerCount < 5) {
+    if (playerCount < 6) {
         playerCount++;
+        if (playerCount == 6) {
+            alert("You Have Added 5 Players");
+            playerCount--;
+            return;
+        }
         ol.appendChild(li);
     }
+    // if (playerCount == 6) {
+    //     alert("You Have Added 5 Players");
+    // }
 }
 
 
