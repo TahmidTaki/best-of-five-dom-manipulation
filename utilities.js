@@ -24,3 +24,21 @@ function setTextElementValue(elementId, newValue) {
     const textElement = getElementById(elementId);
     textElement.innerText = newValue;
 }
+
+let playerCount = 0;
+
+function addPlayerInList(playerName) {
+    const ol = document.getElementById('player-list');
+    const li = document.createElement('li');
+    li.innerText = playerName;
+    playerCount++;
+    if (playerCount < 6) {
+        ol.appendChild(li);
+    }
+}
+
+
+function disableButton(buttonId) {
+    const list = document.getElementById(buttonId).classList;
+    list.add("disabled");
+}
