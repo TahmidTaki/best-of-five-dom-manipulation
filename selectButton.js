@@ -36,5 +36,7 @@ document.getElementById('select-btn-6').addEventListener('click', function () {
     disableButton('select-btn-6');
 })
 
+// console.log(playerCount);
+
 
 

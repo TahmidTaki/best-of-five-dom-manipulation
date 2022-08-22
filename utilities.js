@@ -10,6 +10,10 @@ function getInnerText(elementId) {
 function getInputValue(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
     const inputFieldString = inputField.value;
+    if (inputFieldString === '') {
+        alert('Please Fill Up all 3 Input Boxes');
+        return;
+    }
     if (isNaN(inputFieldString)) {
         alert('Please Enter Number');
         inputField.value = '';
@@ -21,7 +25,7 @@ function getInputValue(inputFieldId) {
 }
 
 function setTextElementValue(elementId, newValue) {
-    const textElement = getElementById(elementId);
+    const textElement = document.getElementById(elementId);
     textElement.innerText = newValue;
 }
 
@@ -31,8 +35,9 @@ function addPlayerInList(playerName) {
     const ol = document.getElementById('player-list');
     const li = document.createElement('li');
     li.innerText = playerName;
-    playerCount++;
-    if (playerCount < 6) {
+
+    if (playerCount < 5) {
+        playerCount++;
         ol.appendChild(li);
     }
 }
