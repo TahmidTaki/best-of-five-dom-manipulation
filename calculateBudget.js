@@ -19,8 +19,8 @@ document.getElementById('calculate-total-cost').addEventListener('click', functi
     const coachCost = getInputValue('coach-cost-input');
     const totalCost = managerCost + coachCost + totalPlayerCost;
 
-    if (playerCount == 0) {
-        alert('Please select at least one player');
+    if (totalPlayerCost == 0) {
+        alert('Please select player expence button first');
         return;
     }
 
